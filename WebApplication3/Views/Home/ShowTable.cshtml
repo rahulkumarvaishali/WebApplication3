@@ -1,0 +1,35 @@
+﻿@model List<WebApplication3.Databases.RahulTable>
+@{
+    ViewBag.Title = "ShowTable";
+}
+
+<h2>ShowTable</h2>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Salary</th>
+        <th>Depat</th>
+        <th>ZipCode</th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Mobile</td>
+            <td>@item.Salary</td>
+            <td>@item.Depat</td>
+            <td>@item.ZipCode</td>
+            
+        </tr>
+    }
+
+
+
+</table>

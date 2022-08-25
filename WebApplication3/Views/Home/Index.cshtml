@@ -1,0 +1,37 @@
+﻿@model List<WebApplication3.Models.Demo>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<br />
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Salary</th>
+        <th>Depat</th>
+        <th>ZipCode</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+         <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Mobile</td>
+            <td>@item.Salary</td>
+            <td>@item.Depat</td>
+            <td>@item.ZipCode</td>
+            <td><a href="@Url.Action("Delete","Home",new {item.Id})"class="btn btn-danger">Delete</a></td>
+            <td><a href="@Url.Action("Edit","Home",new {item.Id })"class="btn btn-success">Update</a></td>
+        </tr>
+    }
+
+
+
+</table>
